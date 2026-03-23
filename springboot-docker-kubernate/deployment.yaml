@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sb-api-docker-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sb-api
+  template:
+    metadata:
+      labels:
+        app: sb-api
+    spec:
+      containers:
+        - name: sb-api
+          image: kmatpvm/test-docker:1.7
+          ports:
+            - containerPort: 8085
+          resources:
+            requests:
+              memory: "256Mi"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"

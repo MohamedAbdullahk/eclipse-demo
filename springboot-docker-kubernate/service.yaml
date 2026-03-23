@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sb-api-docker-service
+spec:
+  type: LoadBalancer           # Gives you an external IP
+  selector:
+    app: sb-api                # Routes to pods with this label
+  ports:
+    - port: 80                 # External port
+      targetPort: 8085         # Your app's port
