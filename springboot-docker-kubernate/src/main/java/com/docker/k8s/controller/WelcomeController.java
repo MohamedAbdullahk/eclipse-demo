@@ -10,7 +10,7 @@ public class WelcomeController {
 	
 	@GetMapping("/welcome")
 	public String welcome() {
-		return "Welcome docker kubernate with spring boot api version : 2.2";
+		return "Welcome docker kubernate with spring boot api version : 2.3";
 	}
 
 }

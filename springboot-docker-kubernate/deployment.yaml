@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: sb-api
-          image: kmatpvm/test-docker:2.2
+          image: kmatpvm/test-docker:2.3
           ports:
             - containerPort: 8085
           resources:
